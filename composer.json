@@ -16,7 +16,7 @@
             "init.php"
         ],
         "psr-4": {
-            "Bolt\\Extension\\Dpfavand\\Jsonfieldtype\\": ""
+            "Bolt\\Extension\\dpfavand\\jsonfieldtype\\": ""
         }
     },
     
