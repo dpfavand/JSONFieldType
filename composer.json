@@ -1,5 +1,5 @@
 {
-    "name": "dpfavand/JSONFieldType",
+    "name": "dpfavand/jsonfieldtype",
     "description": "An extension to add JSON as a field type within Bolt. Uses Andrew Cantino's JSONEditor (https://github.com/cantino/jsoneditor, MIT license). Supports key:var pairs, arrays, sub-objects. JSON can be loaded into a Twig object using Bolt's json_decode filter. Note: Editor will break if invalid JSON is in the database field.",
     "type": "bolt-extension",
     "require": {
