@@ -1,0 +1,38 @@
+{#=== Options ===========================================================================================================#}
+
+{% set attr_opt = {
+    class:        field.class|default(''),
+    name_id:      key,
+    required:     field.required|default(false),
+    readonly:     field.readonly|default(false)
+}%}
+
+
+{#=== INIT ===========================================================================================================#}
+
+{% set attr_text = {
+    class:     option.class,
+    name:      key,
+    required:  option.required,
+    style:     option.height ? 'height: '~option.height~';' : '',
+    data_errortext: option.errortext,
+}%}
+
+{#=== FIELDSET =======================================================================================================#}
+
+<fieldset class="jsonfield">
+    <div class="col-sm-12">
+            <label class="control-label">{{field.label|default(key)}}</label>
+        <textarea{{ macro.attr(attr_text) }} id="json-{{key}}">{{ context.content.get(key)|default('') }}</textarea>
+       <script>
+       $(document).ready(function(){
+        JSONEditor.prototype.ADD_IMG = '/files/add.png';
+        JSONEditor.prototype.DELETE_IMG = '/files/delete.png';
+        var {{ key }}JSONEditor = new JSONEditor($("#json-{{key}}"), { showWipe: false });
+        {{ key }}JSONEditor.doTruncation(true);
+        {{ key }}JSONEditor.showFunctionButtons();
+      });
+    </script>
+       </script>
+    </div>
+</fieldset>
