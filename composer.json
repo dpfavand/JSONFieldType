@@ -9,7 +9,7 @@
     "authors": [{"name": "Daniel Favand", "email": "daniel@favand.net"}
     ],
     "keywords": [
-        "backend", "field", "colourpicker"
+        "backend", "field", "json"
     ],
     "autoload": {
         "files": [
